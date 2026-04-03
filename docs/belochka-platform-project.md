@@ -211,3 +211,90 @@ Payment
 DeviceCommand  
 
 Это основной поток системы.
+# 17. DEVICE STATE MODEL
+
+DeviceState
+-----------
+deviceId
+onlineStatus (online, offline)
+lastSeenAt
+feedLevelPercent
+feedLevelGrams
+lastRefillAt
+lastOrderStatus
+errorStatus
+temperature
+voltage
+updatedAt
+
+# 18. DEVICE COMMAND MODEL
+
+DeviceCommand
+-------------
+id
+deviceId
+commandType (feed, restart, update, test)
+payload
+status (pending, sent, executed, failed)
+createdAt
+executedAt
+
+# 19. ALERT RULE MODEL
+
+AlertRule
+----------
+id
+deviceType
+condition
+threshold
+severity
+messageTemplate
+enabled
+
+# 19. ALERT RULE MODEL
+
+AlertRule
+----------
+id
+deviceType
+condition
+threshold
+severity
+messageTemplate
+enabled
+
+# 21. MARKETING MODELS
+
+Campaign
+--------
+id
+franchiseId
+name
+campaignType
+startDate
+endDate
+status
+
+Offer
+-----
+id
+campaignId
+offerType
+value
+conditions
+
+LoyaltyAccount
+--------------
+id
+customerId
+points
+level
+
+BonusTransaction
+----------------
+id
+customerId
+amount
+type
+timestamp
+
